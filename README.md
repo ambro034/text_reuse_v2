@@ -107,31 +107,45 @@ Where:
 
 ### Examples
 
-    # Set Up
+    ## Set Up
     !pip install "git+https://github.com/ambro034/text_reuse_2.git"
     import text_reuse as tr
     import pandas as pd
     
-    # Load Data
-    data = pd.read_csv(fake_data.csv, encoding='cp1252')
-    data.info()
-
+    ## Load Data
     # Two Statements from Strings
     s1 = "In this case, the public utilities commission shall consult with the energy commission in calculating market prices and establishing other renewable portfolio standard policies--for this is the right thing."
     s2 = "The public utilities commission shall consult with the energy commission in establishing renewable portfolio standard policies, but this is the right thing."
 
+    # Toy Data
+
+    url = 'https://github.com/ambro034/text_reuse_v2/blob/main/fake_data_2.csv?raw=true'
+    fake = pd.read_csv(url, encoding = "cp1252")
+    fake.info()
+
+    # Colorado Net Metering Overtime
+
+    url = 'https://github.com/ambro034/text_reuse_v2/blob/main/Colorado_Net_Metering_Overtime.csv?raw=true'
+    COL_NM = pd.read_csv(url, encoding = "cp1252")
+    COL_NM.info()
+
+    ## Basic Reuse Identification
+    
     tr.id_reuse(s1,s2,2)
 
+    ## Construct and Run from Dataframe
     # Construct Data
-    mydata = tr.construct_dataset(data,0,1,2020,2,2019)
-
+    
+    mydata = tr.construct_dataset(fake,False,1,2020,2,2019)
+    
     # Run Dataframe to Dataframe
-    tr.reuse_dataset_to_dataset(mydata,0,2,1,2)
+    
+    tr.reuse_dataset_to_dataset(mydata,0,1,2,2)
 
-    # Run Loop for multiple comparisons of text reuse
+    ## Run Loop for multiple comparisons of text reuse
 
-    data = tr.sheet_loop(file,2)
-    data
+    looped_data = tr.sheet_loop(COL_NM,2)
+    looped_data
 
 [Link to Google Collaboratory](https://colab.research.google.com/drive/1zz002Z0REg3mKiaYo5psdy8yvWrRLh2A?usp=sharing)
     
