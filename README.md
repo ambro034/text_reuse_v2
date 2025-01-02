@@ -106,7 +106,7 @@ Where:
 ### Examples
 
     # Set Up
-    !pip install "git+https://github.com/ambro034/text_reuse.git"
+    !pip install "git+https://github.com/ambro034/text_reuse_2.git"
     import text_reuse as tr
     import pandas as pd
     
@@ -120,13 +120,28 @@ Where:
 
     tr.id_reuse(s1,s2,2)
 
-    tr.reuse_color_coded(s1,s2,2)
-
     # Construct Data
     mydata = tr.construct_dataset(data,0,1,2)
 
-    #Run Dataframe to Dataframe
+    # Run Dataframe to Dataframe
     tr.reuse_dataset_to_dataset(mydata,0,2,1,2)
+
+    # Run Tab from Google Sheet
+
+    #Identify sheet and tab
+    Google_Sheet = 'Legislation over time_Final'
+    tab = 'Massachusetts 39'
+
+    file= tr.data_from_GD(Google_Sheet,tab)
+    file
+
+    # Run Loop
+
+    data = tr.sheet_loop(file,2)
+    data
+
+    # [Link to Google Collaboratory](https://colab.research.google.com/drive/16cXBHFGnts-YXSZ-LoOpdFWiz4YagBRN?usp=sharing)
+    
 
     
 ## Built With
