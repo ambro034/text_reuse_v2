@@ -140,7 +140,7 @@ Where:
     data = tr.sheet_loop(file,2)
     data
 
-    # [Link to Google Collaboratory](https://colab.research.google.com/drive/16cXBHFGnts-YXSZ-LoOpdFWiz4YagBRN?usp=sharing)
+[Link to Google Collaboratory](https://colab.research.google.com/drive/16cXBHFGnts-YXSZ-LoOpdFWiz4YagBRN?usp=sharing)
     
 
     
