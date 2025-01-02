@@ -70,13 +70,15 @@ A function to added with dataframe construction.
 #### construct_dataset
 This is a function that takes a variably framed dataframe and conforms it to the structure useful in the above functions.
 
-    construct_dataset(data,id,new_year,old_year)
+    construct_dataset(data,id,new_year,new_year_num,old_year,old_year_num)
 
 Where:
   - *data* is the name of the dataframe
   - *id* is the column position for Statement IDs in the dataframe
   - *new_year* is the column position for Statement #1 in the dataframe
+  - *new_year_num* is the year identifier that will be used for Statement #1 in the dataframe
   - *old_year* is the column position for Statement #2 in the dataframe
+  - *old_year_num* is the year identifier that will be used for Statement #2 in the dataframe
     
 
 ### Additional Reuse Functions
@@ -121,7 +123,7 @@ Where:
     tr.id_reuse(s1,s2,2)
 
     # Construct Data
-    mydata = tr.construct_dataset(data,0,1,2)
+    mydata = tr.construct_dataset(data,0,1,2020,2,2019)
 
     # Run Dataframe to Dataframe
     tr.reuse_dataset_to_dataset(mydata,0,2,1,2)
