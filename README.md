@@ -126,21 +126,12 @@ Where:
     # Run Dataframe to Dataframe
     tr.reuse_dataset_to_dataset(mydata,0,2,1,2)
 
-    # Run Tab from Google Sheet
-
-    #Identify sheet and tab
-    Google_Sheet = 'Legislation over time_Final'
-    tab = 'Massachusetts 39'
-
-    file= tr.data_from_GD(Google_Sheet,tab)
-    file
-
-    # Run Loop
+    # Run Loop for multiple comparisons of text reuse
 
     data = tr.sheet_loop(file,2)
     data
 
-[Link to Google Collaboratory](https://colab.research.google.com/drive/16cXBHFGnts-YXSZ-LoOpdFWiz4YagBRN?usp=sharing)
+[Link to Google Collaboratory](https://colab.research.google.com/drive/1zz002Z0REg3mKiaYo5psdy8yvWrRLh2A?usp=sharing)
     
 
     
