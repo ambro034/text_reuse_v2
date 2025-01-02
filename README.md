@@ -21,7 +21,7 @@ These instructions will outline installation, a description of the functions, as
 
 All of the functions that are identified below can be installed and imported given the code below:
 
-    !pip install "git+https://github.com/ambro034/text_reuse.git"
+    !pip install "git+https://github.com/ambro034/text_reuse_2.git"
     import text_reuse as tr
 
 ## Functions
