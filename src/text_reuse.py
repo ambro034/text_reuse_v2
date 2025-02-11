@@ -73,7 +73,6 @@ def construct_dataset(data,id,new_year,new_year_num,old_year,old_year_num): # da
 
 ### IDENTIFY REUSE ###
 
-
 def id_reuse(str1,str2,l):
 
   new1 = str1.lower().split()
@@ -105,8 +104,6 @@ def id_reuse(str1,str2,l):
 
   if len(long_answer) >= l:
     return" ".join(long_answer)
-
-    
 
 
 ### IDENTIFY ALL REUSE ###
@@ -444,3 +441,30 @@ def sheet_loop(TAB,l):
 
 
   return c_prev
+
+################
+### OUT PUTS ###
+################
+
+### Print in Color ###
+
+from IPython.display import HTML as html_print
+from IPython.display import display
+
+def cstr(s, color='black'):
+    return "<text style=color:{}>{}</text>".format(color, s)
+
+def print_color(t):
+    display(html_print(' '.join([cstr(ti, color=ci) for ti,ci in t])))
+
+### Single Color ###
+
+def reuse_color_coded(str1,str2,l):
+  new_str, old_str = reuse_loops2(str1,str2,l)
+
+  # PRINT
+  print('New Language:')
+  print_color((new_str))
+
+  print('Old Language:')
+  print_color((old_str))
