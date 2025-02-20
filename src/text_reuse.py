@@ -318,29 +318,29 @@ def reuse_dataset_to_dataset(data,id,new_year,old_year,l):
         removed = " ".join([removed, old_str[x][0]])
         removed2 = " ".join([removed2, old_str[x][0]])
 
-    # Counts
+        # Counts
 
-    if new != "" and new != "nan" and new != np.nan:
+    if new != "" and new != "nan" and new != " nan":
       new_wc = len(re.findall(r'\w+', new))
     else:
       new_wc = 0
 
-    if added2 != "" and added2 != "nan" and added2 != np.nan:
+    if added2 != "" and added2 != "nan" and added2 != " nan":
       added_wc = len(re.findall(r'\w+', added2))
     else:
       added_wc = 0
 
-    if reuse2 != "" and reuse2 != "nan" and reuse2 != np.nan:
+    if reuse2 != "" and reuse2 != "nan" and reuse2 != " nan":
       reuse_wc = len(re.findall(r'\w+', reuse2))
     else:
       reuse_wc = 0
 
-    if removed2 != "" and removed2 != "nan" and removed2 != np.nan:
+    if removed2 != "" and removed2 != "nan" and removed2 != " nan":
       removed_wc = len(re.findall(r'\w+', removed2))
     else:
       removed_wc = 0
 
-    if old != "" and old != "nan" and old != np.nan:
+    if old != "" and old != "nan" and old != " nan":
       old_wc = len(re.findall(r'\w+', old))
     else:
       old_wc = 0
