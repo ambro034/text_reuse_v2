@@ -263,11 +263,11 @@ def reuse_dataset_to_dataset(data,id,new_year,old_year,l):
   ny = data.columns[new_year]
   oy = data.columns[old_year]
 
-  nt = ny+'_Text'
-  ntw = ny+'_Text_WC'
+  nt = ny+'_N_Text'
+  ntw = ny+'_N_Text_WC'
 
-  na = ny+'_N_Added'
-  naw = ny+'_N_Added_WC'
+  na = ny+'_Added'
+  naw = ny+'_Added_WC'
   nr = ny+'_Reused'
   nrw = ny+'_Reused_WC'
   nter = ny+'_Terminated'
