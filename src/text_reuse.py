@@ -266,15 +266,15 @@ def reuse_dataset_to_dataset(data,id,new_year,old_year,l):
   nt = ny+'_Text'
   ntw = ny+'_Text_WC'
 
-  na = ny+'_Added'
-  naw = ny+'_Added_WC'
+  na = ny+'_N_Added'
+  naw = ny+'_N_Added_WC'
   nr = ny+'_Reused'
   nrw = ny+'_Reused_WC'
   nter = ny+'_Terminated'
   nterw = ny+'_Terminated_WC'
 
-  ot = oy+'_Text'
-  otw = oy+'_Text_WC'
+  ot = oy+'_O_Text'
+  otw = oy+'_O_Text_WC'
 
   rmnt = ny+'_New_Ratio_of_Match'
   rmot = ny+'_Old_Ratio_of_Match'
