@@ -431,7 +431,7 @@ def sheet_loop(TAB,l):
   c_prev = None
   results = []
   for i in range (len(cols) -1):
-    c = construct_dataset(TAB,False,i,len(cols)-i,i+1,len(cols)-i]) # c = construct_dataset(TAB,False,i,cols[i],i+1,cols[i+1])
+    c = construct_dataset(TAB,False,i,len(cols)-i,i+1,len(cols)-i) # c = construct_dataset(TAB,False,i,cols[i],i+1,cols[i+1])
     c_out = reuse_dataset_to_dataset(c,0,1,2,l)
     #print(c_out)
     if c_prev is not None:
